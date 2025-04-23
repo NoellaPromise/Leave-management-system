@@ -56,6 +56,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -120,8 +121,13 @@
 				<artifactId>webjars-locator-core</artifactId>
 				<version>0.50</version>
 			</dependency>
+			<!-- <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-oauth2-client</artifactId>
+		 <version>3.4.4</version>
+     </dependency> -->
 		</dependencies>
-	</dependencyManagement>
+     </dependencyManagement>
 
 	<build>
 		<plugins>
