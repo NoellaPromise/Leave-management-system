@@ -1,2 +1,29 @@
-.cursor
+# Node.js frontend
+.node_modules
+/frontend/.next
+/frontend/.env
+
+# Java backend (Maven + IntelliJ)
+leave-management/target/
+leave-management/.classpath
+leave-management/.project
+leave-management/.settings
+leave-management/.env
+leave-management/.idea
+leave-management/.mvn
+
+# Global .env file at root
+.env
+
+# Logs
 *.log
+logfile.log
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Cursor
+.cursor/
