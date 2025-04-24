@@ -14,7 +14,7 @@ leave-management/.mvn
 
 # Global .env file at root
 .env
-
+*.txt
 # Logs
 *.log
 logfile.log
@@ -27,3 +27,4 @@ logfile.log
 
 # Cursor
 .cursor/
+.gitignore
