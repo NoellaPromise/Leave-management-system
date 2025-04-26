@@ -44,7 +44,7 @@ public class LeaveApplicationService {
         return !type.isDocumentRequired() || (type.isDocumentRequired() && document != null);
     }
 
-    @PreAuthorize("hasRole('STAFF') or hasRole('MANAGER')")
+    // @PreAuthorize("hasRole('STAFF') or hasRole('MANAGER')")
     public void trackLeaveStatus(String applicationId, String status) {
         // Implement logic to track leave application status
     }
@@ -90,5 +90,19 @@ public class LeaveApplicationService {
 
     public List<LeaveApplication> getLeaveHistoryForEmployee(Long employeeId) {
         return leaveApplicationRepository.findByStatusAndEmployeeId(LeaveApplication.Status.APPROVED, employeeId);
+    }
+
+    // @PreAuthorize("hasRole('MANAGER')")
+    public void approveLeave(Long id) {
+        LeaveApplication application = leaveApplicationRepository.findById(id).orElseThrow();
+        application.setStatus(LeaveApplication.Status.APPROVED);
+        leaveApplicationRepository.save(application);
+    }
+
+    // @PreAuthorize("hasRole('MANAGER')")
+    public void rejectLeave(Long id) {
+        LeaveApplication application = leaveApplicationRepository.findById(id).orElseThrow();
+        application.setStatus(LeaveApplication.Status.REJECTED);
+        leaveApplicationRepository.save(application);
     }
 } 

@@ -27,7 +27,7 @@ public class ManagerController {
     @PostMapping("/reject/{id}")
     public String rejectLeave(@PathVariable String id) {
         // Implement logic to reject a leave application
-        return "Leave Application Rejected for " + id;
+        return "Leave Application Rejected for " +  id;
     }
 
     @GetMapping("/team-leave-balance")
